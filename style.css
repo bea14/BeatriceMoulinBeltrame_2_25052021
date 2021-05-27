@@ -50,6 +50,10 @@ h1 {
 }
 
 h2 {
+	font-size: 1.2em;
+}
+
+h3 {
 	font-size: 1em;
     font-weight: normal;
 }
@@ -57,15 +61,10 @@ h2 {
 section {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
-    align-items: flex-end;
 	width: 100%;
-	padding-bottom: 20px;
+	padding-bottom: 1.2em;
+    padding-top: 1.5em;
 	margin: 0.5em 1em;
-	/*box-shadow: 0px 0px 10px #bbb;*/
-}
-section > div {
-	width: 95%;
 }
 
 .button {
@@ -78,7 +77,10 @@ section > div {
 	text-align: center;
 	border-radius: 5px;
 }
-/* Header */
+
+/***************************/
+/********** Header *********/
+/**************************/
 
 header {    
     background-color: #fff;
@@ -87,7 +89,6 @@ header {
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    /*box-shadow: 0px 0px 15px #333;*/
 }
 
 .logo img {
@@ -113,9 +114,7 @@ header {
 
 nav {
     border-bottom: 2px solid #f2f2f2;
-    padding-left: auto;
-    padding-right: auto;
-    margin: 0 2em;
+    margin: 0 0.7em;
     padding-top: 3em;
     width: 100%
 }
@@ -124,12 +123,11 @@ nav ul {
     padding: 1em 0.8em;
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: row nowrap;    
 }
 
 nav a {
-    /*display: inline-block;*/
     text-align: center;
     width: 100%;
 }
@@ -139,7 +137,7 @@ nav a:hover {
     border-bottom: 2px solid #0065fc;
 }
 
-/*******barre de recherche******/
+/*******Slogan******/
 .slogan {
     margin: 1em auto;
     padding: 1em 2em;
@@ -204,9 +202,6 @@ input {
 .filters {
     flex-direction: row;
     min-height: 20px;
-    align-items: center;
-    align-content: space-between;
-    flex-wrap: nowrap;
     padding: 0 2em;
 }
 
@@ -215,22 +210,8 @@ input {
     padding-bottom: 1em;
 }
 
-
-/*.filters {
-    display: flex row wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px;
-    border: solid 1px gray;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-}*/
 .filterbutton {
     display: inline-flex;
-    border-left: none;
     background-color: #ffffff;
     font-size: 1em;
     font-weight: bold;
@@ -244,6 +225,7 @@ input {
     -ms-border-radius: 25px 25px;
     -o-border-radius: 25px 25px;
     padding-right: 1em;
+    margin-bottom: 0.5em;
 }
 
 .filterbutton i {
@@ -257,7 +239,6 @@ input {
     -o-border-radius: 50%;
     line-height: 50px;
     text-align: center;
-    vertical-align: bottom;
     margin-right: 1em;
     color: #0065FC;
     font-size: 1.2em;
@@ -279,7 +260,6 @@ input {
     border-radius: 50%;
     text-align: center;
     line-height: 30px;
-    text-align: center;
     vertical-align: bottom;
 }
 
@@ -310,32 +290,26 @@ main {
     flex-direction: column;
 }
 
-
 .card-content {
-	padding-left: 1.4em;    
+	padding-left: 1.4em;
+    margin-top: 1em;    
 }
 
-.card-content h2 {
+.card-content h3 {
 	margin-top: -0.5em;
     margin-right: 0.5em;
 	margin-bottom: 0.5em;
 	font-weight: bold;
-    font-size: 0.9em;;
 }
 
 .card-content p {
 	font-size: 80%;
 }
 
-p + .rating {
-    margin-top: 2.5em;
-    padding-top: 1em;
-}
-
 .rating {
     padding-left: 0.3em;
     font-size: 0.6em;
-    /*padding-top: 1.2em;*/
+    margin-bottom: 0.5em;
 }
 
 .greystars {
@@ -352,16 +326,13 @@ p + .rating {
     font-weight: bold;
     padding-bottom: 15px;
 }
+
 .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-flow: row nowrap; 
+   font-weight: bold;
 }
 
-/*********************/
+
 /*******HEBERGEMENT*******/
-/*********************/
 #hebergement {
     width: 100%;
     background-color: #ffffff;
@@ -380,8 +351,14 @@ p + .rating {
     flex: 0 1 calc(95% - 1em);
     background: white;
     border-radius: 25px;
+    box-shadow: 0.2em 0.2em #F2F2F2;
+    margin: 1em 0;
 }
 
+#hebergement p + .rating {
+    margin-top: 0.5em;
+    padding-top: 1em;
+}
 #hebergement .card + .card {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -394,26 +371,16 @@ p + .rating {
 #hebergement picture img {
 	display: block;
     width: 100%;
-    height: 125px;
+    height: 100px;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    margin: 0.5em;
+    margin: 0;
 }
 
 
-.afficher_plus
-    {
-        background-color: transparent;
-        text-align: left;
-        margin-left: 20px;
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-/*********************/
 /*******POPULAR*******/
-/*********************/
-#popular{
+#popular {
     width: auto;
     background-color: #F2F2F2;
 	display: flex;
@@ -421,19 +388,23 @@ p + .rating {
     padding: 2em 1em;
 }
 
-
+.popular_title {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap; 
+}
 
 .title a {
     text-align: center;
 }
 
-
 #popular .cards {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
- }
- #popular .card {  
+}
+
+#popular .card {  
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -441,129 +412,91 @@ p + .rating {
     flex: 0 1 calc(95% - 1em);
     background: white;
     border-radius: 25px;
+    box-shadow: 0.2em 0.2em #F2F2F2;
     /*{
         flex: 0 1 calc(25% - 1em);
     }*/
     /*flex: 0 1 32%; flex-grow is 0, flex-shrink is 1, and the width is 24%.*/
 }
 
+#popular p + .rating {
+    margin-top: 2.5em;
+    padding-top: 1em;
+}
+
 #popular .card + .card {
     margin-top: 1em;
-    margin-bottom: 1em;
 }
 
 #popular picture img {
 	display: block;
 	width: 130px;
-    height: 125px;
+    height: 150px;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     margin: 0.3em;
 }
-/*********************/
+
 /*******ACTIVITIES*******/
-/*********************/
-.activities{
-    /*height: 230px;*/
+#activites {
     width: 100%;
-    border-radius: 25px;
-   /* box-shadow: 1px 1px 5px 2px #5a5959;*/
-    position: relative;
-    margin: 10px 0px;
+    background-color: #ffffff;
 }
-#activites
-    {
-        justify-content: center;
-        margin-top: 0px;
-    }
 
-.activities img{
+#activites .cards {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#activites .card {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 calc(95% - 1em);
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0.2em 0.2em #F2F2F2;
+    margin: 1em 0;
+}
+
+#activites .card + .card {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#activites picture {
     width: 100%;
-    height: 230px;
+}
+
+#activites picture img {
+	display: block;
+    width: 100%;
+    height: 150px;
     object-fit: cover;
-    border-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: 0;
 }
 
-.activities figcaption{
-    position: absolute;
-    bottom: 0px;
-    padding: 10px 0px 10px 7%;
-    width: 100%;
-    margin: 0px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+#activites .card-content h3 {
+    font-size: 0.9em;
+    height: 3em;
+    line-height: 2.5em;
 }
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 30px 200px 50px 150px;
-    gap: 30px 35px;
-    margin-bottom: 100px;
-}
-
-.grid div:nth-of-type(1){
-    grid-column: 1 / span 4;
-    grid-row: 1;
-}
-
-.grid div:nth-of-type(2){
-    grid-column: 1;
-    grid-row: 2 / span 3;
-}
-
-.grid div:nth-of-type(3){
-    grid-column: 2;
-    grid-row: 2 / span 2;
-}
-
-.grid div:nth-of-type(4){
-    grid-column: 2;
-    grid-row: 4;
-}
-
-.grid div:nth-of-type(5){
-    grid-column: 3;
-    grid-row: 2 / span 3;
-}
-
-.grid div:nth-of-type(6){
-    grid-column: 4;
-    grid-row: 2;
-}
-
-.grid div:nth-of-type(7){
-    grid-column: 4;
-    grid-row: 3 / span 2;
-}
-
-
-                        /*fin du css grid*/
-
 
 /* Fin de la section activités*/
 
-/* Début du footer*/
+/************************/
+/*** Début du footer*****/
+/************************/
 footer  {
-	display: flex;
 	width: 100%;
 	padding: 20px 0px;
-	box-shadow: 0px 0px 15px #333;
-    background-color: #1a1a44;
-	border-top: 3px #ae952e solid;
-    min-height: 100px;
-}
-  
-footer  {
-	flex: 4 0 100%;
-	padding: 20px 0px;
-	margin-bottom: 10px;
     background-color: #F2F2F2;
-    justify-content: flex-start;
-    gap: 18%;
-    padding-bottom: 20px;
-    padding-left: 3%;
+    min-height: 100px;
 }
 
 footer a{
@@ -571,6 +504,24 @@ footer a{
     padding-top: 1em;
 }
 
+footer div {
+    margin: 1em;
+}
+
+.about, .accomodations, .help {
+    padding: 1em;
+    line-height: 1em;
+}
+
+footer h2 {
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: large;
+}
+
+footer a + a {
+    margin: 1em;
+}
 /*********************************************/
 /*********************RESPONSIVE**************/
 /*********************************************/
@@ -649,6 +600,80 @@ footer a{
 		background-color: #c8e6c9;
 		color: rgb(66, 66, 66);
 	}
+       
+.activities{
+    height: 230px;
+    width: 100%;
+    border-radius: 25px;
+   box-shadow: 1px 1px 5px 2px #5a5959;
+    position: relative;
+    margin: 10px 0px;
+}
+
+
+.activities img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.activities figcaption{
+    position: absolute;
+    bottom: 0px;
+    padding: 10px 0px 10px 7%;
+    width: 100%;
+    margin: 0px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 30px 200px 50px 150px;
+    gap: 30px 35px;
+    margin-bottom: 100px;
+}
+
+.grid div:nth-of-type(1){
+    grid-column: 1 / span 4;
+    grid-row: 1;
+}
+
+.grid div:nth-of-type(2){
+    grid-column: 1;
+    grid-row: 2 / span 3;
+}
+
+.grid div:nth-of-type(3){
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+
+.grid div:nth-of-type(4){
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.grid div:nth-of-type(5){
+    grid-column: 3;
+    grid-row: 2 / span 3;
+}
+
+.grid div:nth-of-type(6){
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.grid div:nth-of-type(7){
+    grid-column: 4;
+    grid-row: 3 / span 2;
+}
+
+
+                        /*fin du css grid*/
+
 }*/
 	
 
