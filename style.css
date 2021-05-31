@@ -1,7 +1,8 @@
-@font-face {
+ @font-face {
     font-family: 'Raleway';
     src:url('./fonts/Raleway-VariableFont_wght.ttf') format("truetype");
 }
+
 html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, small, strong, sub, sup, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title {
 	margin: 0;
 	padding: 0;
@@ -64,7 +65,7 @@ section {
 	width: 100%;
 	padding-bottom: 1.2em;
     padding-top: 1.5em;
-	margin: 0.5em 1em;
+	/*margin: 0.5em 1em;*/
 }
 
 .button {
@@ -129,14 +130,17 @@ nav ul {
 
 nav a {
     text-align: center;
-    width: 100%;
 }
 
-nav a:hover {
+nav a :hover {
+    color: #0065fc;
+    border-top: 2px solid #0065fc;
+}
+
+nav a:active {
     color: #0065fc;
     border-bottom: 2px solid #0065fc;
 }
-
 /*******Slogan******/
 .slogan {
     margin: 1em auto;
@@ -282,7 +286,6 @@ main > #activites {
 }
 
 main {
-	margin: 0px 25px ;
 	width: auto;
     display: flex;
     justify-content: space-between;
@@ -320,7 +323,7 @@ main {
     color: #0065FC;
 }
 
-.plus{
+.plus {
     flex-basis: 100%;
     font-size: 1em;
     font-weight: bold;
@@ -336,6 +339,7 @@ main {
 #hebergement {
     width: 100%;
     background-color: #ffffff;
+    padding: 2em 1em;
 }
 
 #hebergement .cards {
@@ -343,12 +347,13 @@ main {
     justify-content: space-between;
     align-items: center;
  }
+
  #hebergement .card {  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex: 0 1 calc(95% - 1em);
+    flex: 0 1 calc(100% - 1em);
     background: white;
     border-radius: 25px;
     box-shadow: 0.2em 0.2em #F2F2F2;
@@ -364,24 +369,19 @@ main {
     margin-bottom: 1em;
 }
 
-#hebergement picture {
-    width: 100%;
-}
-
 #hebergement picture img {
 	display: block;
-    width: 100%;
-    height: 100px;
+    width: 90vw;
+    height: 15vh;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    margin: 0;
 }
 
 
 /*******POPULAR*******/
 #popular {
-    width: auto;
+    width: 100%;
     background-color: #F2F2F2;
 	display: flex;
 	flex-direction: column;
@@ -409,7 +409,6 @@ main {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    flex: 0 1 calc(95% - 1em);
     background: white;
     border-radius: 25px;
     box-shadow: 0.2em 0.2em #F2F2F2;
@@ -430,8 +429,8 @@ main {
 
 #popular picture img {
 	display: block;
-	width: 130px;
-    height: 150px;
+    width: 30vw;
+    height: 20vh;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -440,8 +439,9 @@ main {
 
 /*******ACTIVITIES*******/
 #activites {
-    width: 100%;
+    width: 100vw;
     background-color: #ffffff;
+    padding: 2em 1em;
 }
 
 #activites .cards {
@@ -455,7 +455,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex: 0 1 calc(95% - 1em);
+    flex: 0 1 calc(100% - 1em);
     background: white;
     border-radius: 25px;
     box-shadow: 0.2em 0.2em #F2F2F2;
@@ -467,18 +467,12 @@ main {
     margin-bottom: 1em;
 }
 
-#activites picture {
-    width: 100%;
-}
-
 #activites picture img {
-	display: block;
-    width: 100%;
-    height: 150px;
+	width: 90vw;
+    height: 20vh;
     object-fit: cover;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    margin: 0;
 }
 
 #activites .card-content h3 {
@@ -526,107 +520,95 @@ footer a + a {
 /*********************RESPONSIVE**************/
 /*********************************************/
 
-/*********************TABLETTES**************/
-/*
-@media all and (min-width: 764px)
-{
-	h1 
-    {
-        text-align: center;
+/*******Smartphones paysage et tablettes portrait**************/
 
-    }
-
-    h1 + p
-    {
-        text-align: center;
-    }
-
-    .logo{
-        margin: 0px 4%;
-        flex-basis: 55%;
-    }
-
-    nav {
-        display: flex;
-        flex-flow: row;
-        margin: 0px 10px;
-        }
-#searchbar
-
-    {
+@media all and (min-width: 520px) and (max-width: 759px) {	
+    #searchbar {
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
     }
 
-        #hebergement, #popular{
-            flex-flow: row wrap;
-        }
+   #popular .card {
+      justify-content: unset;
+      flex: 1 1 calc(100% - 1em);
+   }
 
-        #hebergement {
-            order: 1;
-            flex-basis: 66%;
-            justify-content: space-around;
-            display: flex;
-        }
-        
-        #popular {
-            order: 2;
-            flex-basis: 30%;
-            justify-content: center;
-            position: relative;
-        }
-}*/
-
-/*********************ECRANS**************/
-/*@media all and (min-width: 900px) {
-	header{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        height: 10vh;
-        align-items: center;
+    #popular picture img {
+            width: 40vw;
+            height: 35vh;
     }
-	aside {
+
+    #hebergement picture img {
+        width: 96vw;
+        height: 40vh;
+    }
+
+    #activites picture img {
+        width: 96vw;
+        height: 40vh;
+    }
+    
+}
+
+/*******Tablettes et iPad**************/
+@media all and (min-width: 760px) and (max-width: 959px) {	
+}
+/*******Desktop**************/
+@media all and (min-width: 1024px) and (max-width: 1279px) {	
+    aside {
 		order: unset;
 	}
 	
 	 main {
 		order: unset;
 	}
-	
-	aside {
+
+    aside {
 		width: 32%;
 		background-color: #c8e6c9;
 		color: rgb(66, 66, 66);
 	}
-       
-.activities{
-    height: 230px;
-    width: 100%;
-    border-radius: 25px;
-   box-shadow: 1px 1px 5px 2px #5a5959;
-    position: relative;
-    margin: 10px 0px;
+      
+    #hebergement {
+        order: 1;
+        flex-basis: 66%;
+        justify-content: space-around;
+        display: flex;
+    }
+
+    #hebergement .cards{
+        flex: 0 1 calc(60% - 1em);
+        }
+
+    #hebergement .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    #hebergement picture img {
+        width: 15vw;
+        height: 20vh;
+    }
+
+    #popular {
+        order: 2;
+        flex-basis: 30%;
+        justify-content: center;
+        position: relative;
+    }
+
 }
 
-
-.activities img{
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 25px;
+/*******Large screens**************/
+@media all and (min-width: 1280px) {	
 }
 
-.activities figcaption{
-    position: absolute;
-    bottom: 0px;
-    padding: 10px 0px 10px 7%;
-    width: 100%;
-    margin: 0px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
+/*********************ECRANS**************/
+/*@media all and (min-width: 900px) {
 
 .grid{
     display: grid;
@@ -671,10 +653,9 @@ footer a + a {
     grid-row: 3 / span 2;
 }
 
+*/
 
-                        /*fin du css grid*/
 
-}*/
 	
 
     
