@@ -53,15 +53,19 @@
         </div>
     </header>
 <!--Fin du header-->
-<!--Début de la page principale
+<!--
+    Début de la page principale
 Version mobile : les plus populaires, hebergements, activites
-Version desktop : cote à cote hebergements et les populaires puis activites -->
+Version desktop : cote à cote hebergements et les populaires puis activites 
+-->
     <main>
+        <div id="container">
         <!--Hébergement-->
         <section id="hebergement">
             <h2 class="title">Hébergements à Marseille</h2>
             <section class="cards">
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/hebergements/4_small/hebergement1.jpg" alt="Chambre de l'Auberge de la Cannebière">
                     </picture>
@@ -76,8 +80,10 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star greystars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-one -->
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/hebergements/4_small/hebergement2.jpg" alt="Chambre de l'Hôtel du port">
                     </picture>
@@ -91,9 +97,12 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star bluestars">&nbsp;</i>
                             <i class="fas fa-star bluestars">&nbsp;</i>
                         </div> 
+                        </a>
                     </div>
+                    </a>
                 </article><!-- /card-two -->
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/hebergements/4_small/hebergement3.jpg" alt="Chambre de l'Hôtel des mouettes">
                     </picture>
@@ -108,8 +117,10 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star greystars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-three -->
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/hebergements/4_small/hebergement4.jpg" alt="Chambre de l'Hôtel de la mer">
                     </picture>
@@ -124,8 +135,10 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star greystars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-four -->
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/hebergements/4_small/hebergement5.jpg" alt="Chambre de l'Auberge Le Panier">
                     </picture>
@@ -140,8 +153,10 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star greystars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-five -->
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/hebergements/4_small/hebergement6.jpg" alt="Chambre de l'Hôtel chez Amina">
                     </picture>
@@ -156,12 +171,13 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star bluestars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-six -->
             </section>
             <p class="plus"><a href="#">Afficher plus</a></p>    
         </section>
         <!--Fin de la  section hébergement-->
-<!--Populaires-->
+        <!--Populaires-->
         <aside id="popular">
             <div class="popular_title">
                 <h2 class="title">Les plus populaires</h2>
@@ -169,6 +185,7 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
             </div>
             <section class="cards">
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <source media="(max-width: 768px)" srcset="images/hebergements/4_small/populaire1.jpg">
                         <source media="(min-width: 768px)" srcset="images/hebergements/3_medium/populaire1.jpg" >
@@ -187,8 +204,10 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star bluestars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-one -->
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <source media="(max-width: 768px)" srcset="images/hebergements/4_small/populaire2.jpg">
                         <source media="(min-width: 768px)" srcset="images/hebergements/3_medium/populaire2m.jpg" >
@@ -207,8 +226,10 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star greystars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-two -->
                 <article class="card">
+                    <a href="#">
                     <picture class="thumbnail">
                         <source media="(max-width: 768px)" srcset="images/hebergements/4_small/populaire3.jpg">
                         <source media="(min-width: 768px)"  srcset="images/hebergements/3_medium/populaire3.jpg" >
@@ -227,70 +248,88 @@ Version desktop : cote à cote hebergements et les populaires puis activites -->
                             <i class="fas fa-star greystars">&nbsp;</i>
                         </div> 
                     </div>
+                    </a>
                 </article><!-- /card-three -->
             </section>
         </aside>
-<!--Fin de la section populaires-->
+        <!--Fin de la section populaires-->
 
-
+        </div>
     
 
-    <!--Début de la section activités-->
+        <!--Début de la section activités-->
 
         <section id="activites">
             <h2 class="title">Activités à Marseille</h2>
-            <section class="cards">
-                <article class="card">
+            <section class="cards grid-container">
+                <article class="card z1">
+                    <a href="#">
                     <picture class="thumbnail">
+                        <source media="(min-width: 768px)"  srcset="images/activites/3_medium/activite1.jpg" >
+                        <source media="(min-width: 1024px)" srcset="images/activites/2_large/activite1.jpg">
+                        <source media="(min-width: 1280px)" srcset="images/activites/1_xlarge/activite1.jpg">
                         <img src="images/activites/4_small/activite1.jpg" alt="Promenade sur le Vieux port">
                     </picture>
+                    
                     <div class="card-content">
                         <h3>Vieux port</h3>
                     </div>
+                    </a>
                 </article><!-- /card-one -->
-                <article class="card">
+                <article class="card z2">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/activites/4_small/activite2.jpg" alt="Visite du Fort de Pomègues">
                     </picture>
                     <div class="card-content">
                         <h3>Fort de Pomègues</h3>
                     </div>
+                    </a>
                 </article><!-- /card-two -->
-                <article class="card">
+                <article class="card z3">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images//activites/4_small/activite3.jpg" alt="Naviguez entre les Îles du Frioul">
                     </picture>
                     <div class="card-content">
                         <h3>Îles du Frioul</h3>
                     </div>
+                    </a>
                 </article><!-- /card-three -->
-                <article class="card">
+                <article class="card z4">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/activites/4_small/activite4.jpg" alt="Adimirez le célèbre Parc des Calanques">
                     </picture>
                     <div class="card-content">
                         <h3>Parc National des Calanques</h3>
                     </div>
+                    </a>
                 </article><!-- /card-four -->
-                <article class="card">
+                <article class="card z5">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/activites/4_small/activite5.jpg" alt="Entrez dans Notre-Dame-de-la-Garde">
                     </picture>
                     <div class="card-content">
                         <h3>Notre-Dame-de-la-Garde</h3>
                     </div>
+                    </a>
                 </article><!-- /card-five -->
-                <article class="card">
+                <article class="card z6">
+                    <a href="#">
                     <picture class="thumbnail">
                         <img src="images/activites/4_small/activite6.jpg" alt="Marche au Parc Longchamp">
                     </picture>
                     <div class="card-content">
                         <h3>Parc Longchamp</h3>
                     </div>
+                    </a>
                 </article><!-- /card-three -->
             </section>
         </section>
         <!--Fin de la section activités-->
+        
     </main>
 <!--Fin de la page principale-->
 <!--Début du footer
