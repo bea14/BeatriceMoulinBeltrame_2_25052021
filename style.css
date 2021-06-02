@@ -119,12 +119,17 @@ nav {
 }
 
 nav ul {
-    border-bottom: 2px solid #f2f2f2;
     padding: 1em 0.8em;
     list-style: none;
     display: flex;
     justify-content: space-around;
     flex-flow: row nowrap;    
+    text-align: center;
+}
+
+nav li {
+    width: 100%;
+    border-bottom: 2px solid #f2f2f2;
 }
 
 nav ul li:first-child {
@@ -144,6 +149,11 @@ nav a:active {
     color: #0065fc;
     border-bottom: 2px solid #0065fc;
 }
+
+nav ul li:first-child a {
+    color: #0065FC;
+}
+
 /*******Slogan******/
 .slogan {
     padding: 1em 1em;
@@ -268,10 +278,10 @@ input {
 }
 
 /********Info******/
-
 #info {
-    margin-left: 1em;
+    margin-left: 0.5em;
     margin-top: 1em;
+    margin-right: 0.5em;
     max-width: 600px;
     height: 2.5em;
     display: flex;
@@ -283,7 +293,7 @@ input {
 
 #info i {
     font-size: 0.8em;
-    margin-right: 1.5em;
+    margin-right: 0.5em;
     color: #0065FC;
     border: 2px solid #DEEBFF;
     width: 30px;
@@ -324,7 +334,7 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 0 1 calc(96% - 1em);
+    flex: 0 1 99%;
     background: white;
     border-radius: 25px;
     box-shadow: 0.2em 0.2em #F2F2F2;
@@ -353,12 +363,17 @@ input {
 
 .rating {
     padding-left: 0.3em;
-    font-size: 0.6em;
-    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+
+.rating span {
+    margin-top: 0.5em;
 }
 
 .greystars {
-    color: lightgrey;
+    color: grey;
 }
 
 .bluestars{
@@ -443,6 +458,7 @@ input {
     margin-left: auto;
     margin-right: 1.5em;
 }
+
 #popular .card > a {
     display: flex;
     flex-wrap: nowrap;
@@ -482,8 +498,8 @@ input {
 }
 
 #activites .card {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #activites .card { 
@@ -495,6 +511,7 @@ flex-direction: column;
     flex-wrap: wrap;
     margin: 1em 0;
 }
+
 #activites .card + .card {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -513,10 +530,10 @@ flex-direction: column;
 #activites .card-content h3 {
     font-size: 0.9em;
     height: 3em;
-    line-height: 2.5em;
+    /*line-height: 2.5em;*/
 }
 
-/* Fin de la section activités*/
+/* Fin de la section principale*/
 
 /************************/
 /*** Début du footer*****/
@@ -551,6 +568,7 @@ footer h2 {
 footer a + a {
     margin: 1em;
 }
+
 /*********************************************/
 /*********************RESPONSIVE**************/
 /*********************************************/
@@ -689,6 +707,7 @@ footer a + a {
         justify-content: space-around;
     }
 }
+
 /*******Desktop**************/
 @media all and (min-width: 1024px){		
 	 #container {
@@ -705,17 +724,18 @@ footer a + a {
         right: 7em;
     }
 
-    nav ul {
+    nav li {
         border: none;
     }
 
-    nav ul:first-child {
-        border-bottom: none;    
-    }   
-
     nav ul li:first-child {
         border-top: 0.5em solid #0065fc;
-    }   
+        border-bottom: none; 
+    }  
+    
+    nav ul li:first-child a {
+        color: #0065fc;
+    } 
 
     .slogan {
         margin-top: 3em;
@@ -735,19 +755,18 @@ footer a + a {
     .cards {
         width: unset;
     }
-    
+    .card {
+        display: unset;
+    }
+
     #hebergement .card {
         flex: 0 1 calc(32% - 1em);
     }
 
-    /*#hebergement picture img {
-        width: 15vw;
-        height: 20vh;
-    }*/
-
     #popular {
         width: 33%;
     }
+
     .popular_title {
         width: unset;
     }
@@ -767,6 +786,7 @@ footer a + a {
     #popular picture img {
         width: 15vw;
         height: 10vh;
+        padding-right: 0.2em;
     }
 /*
     #activites {
@@ -815,69 +835,157 @@ footer a + a {
     }
     #activites .card {
         flex: 0 1 calc(25% - 1em);
-    }*/
+    }
+    
+    .activity_container_item {
+  flex: 20%;
+  margin: 1.5vw 1.5vw 1.5vw 1.5vw;
+}
+
+.activity_card {
+  box-shadow: 2px 2px 2px var(--shadow-color);
+  border-radius: 20px 20px;
+}
+div .activity-single-2-3,
+div .activity-single-5-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 490px;
+  padding: 0px;
+}
+.activity_card img {
+  object-fit: cover;
+  height: 120px;
+  width: 100%;
+  border-top-left-radius: 20px 20px;
+  border-top-right-radius: 20px 20px;
+}
+.activity-single-1 {
+  margin-left: 0px;
+}
+.activity-single-1,
+.activity-single-4 {
+  height: 445px;
+}
+.activity-single-2 {
+  max-height: 255px;
+  margin-top: 0px;
+}
+.activity-single-3 {
+  max-height: 165px;
+}
+
+.activity-single-5 {
+  max-height: 203px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.activity-single-6 {
+  max-height: 215px;
+}
+
+.activity_card .caption {
+  height: 60px;
+}
+.activity-single-1 img,
+.activity-single-4 img {
+  height: 390px;
+}
+.activity-single-2 img {
+  height: 200px;
+}
+.activity-single-3 img {
+  height: 110px;
+}
+
+.activity-single-5 img {
+  height: 145px;
+}
+.activity-single-6 img {
+  height: 160px;
+}
+.activity-single-2-3,
+.activity-single-5-6 {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 445px;
+}
+.activity-single-5-6 {
+  margin-right: 0px;
+}
+
+/* 11/ figures and images for the activity-singletures of activity MOBILE version*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .activity {
+      margin: 0px;
+    }
+    */
 
     #activites .cards {
         display: grid;
+        max-height: 40vh;
     }
 
     #activites .card {
         display: flex;
     }
 
-    #activites picture img {
-        width: 25vw;
-        height: 20vh;
+    #activites .card > a {
+        height: 100%;
+    }
+
+    #activites .card-content {
+       max-height : 2.5vh;
+       padding-top: 5px;
+       text-align: center;
     }
 
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 1em;
+        grid-gap: 1.2em 1em;
+        justify-content: space-around;
         grid-template-areas:
           "z1 z2 z4 z5"
           "z1 z3 z4 z6";
-      }
+    }
 
-      .z1 { grid-area: z1; }
-      .z2 { grid-area: z2; }
-      .z3 { grid-area: z3; }
-      .z4 { grid-area: z4; }
-      .z5 { grid-area: z5; }
-      .z6 { grid-area: z6; }
+    .z1 { grid-area: z1; }
+    .z2 { grid-area: z2; }
+    .z3 { grid-area: z3; }
+    .z4 { grid-area: z4; }
+    .z5 { grid-area: z5; }
+    .z6 { grid-area: z6; }
 
-      #activites .z1 picture img,#activites .z4 picture img {
-        height: 54vh;
+    #activites .z1 picture img, #activites .z4 picture img {
+        width: 100%;
+        height: 34vh;  
+    }
+
+    #activites .z2 picture img, #activites .z5 picture img {
+        width: 100%;
+        height: 15vh;  
+    }
+
+    #activites .z3 picture img, #activites .z6 picture img {
+        width: 100%;
+        height: 13vh;
     }
 
 }
 
 /*******Large screens**************/
-@media all and (min-width: 1280px) and (max-width: 1599px) {	
+@media all and (min-width: 1280px) {	
+    #activites .cards {
+        max-height: 60vh;
+    }
 }
 
-@media all and (min-width: 1600x) {	
+@media all and (min-width: 1600px) {	
+    
 }
-
-/*********************ECRANS**************/
-/*.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "z1 z2 z4 z5"
-    "z1 z3 z4 z6";
-}
-.z1 { grid-area: z1; }
-.z2 { grid-area: z2; }
-.z3 { grid-area: z3; }
-.z4 { grid-area: z4; }
-.z5 { grid-area: z5; }
-.z6 { grid-area: z6; }
-
-*/
 
 
 	
