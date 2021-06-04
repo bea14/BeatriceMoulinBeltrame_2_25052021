@@ -249,13 +249,13 @@ input {
     -ms-border-radius: 25px 25px;
     -o-border-radius: 25px 25px;
     padding-right: 1em;
-    padding-left: 1em;
+    margin-left: 0.5em;
     margin-bottom: 0.5em;
 }
 
 .filterbutton i {
     background-color: #deebff;
-    width: 65px;
+    width: 50px;
     height: 50px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -270,11 +270,12 @@ input {
 }
 
 .filterbutton:hover {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+    background-color: #0065FC;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 
 /********Info******/
@@ -318,7 +319,7 @@ input {
 }
 
 #container {
-	width: 100%;
+	/*width: 100%;*/
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -326,14 +327,13 @@ input {
 
 .cards {
     flex-wrap: wrap;
-    justify-content: space-between;
-    /*align-items: center;*/
+    justify-content: space-around;
+    flex: 0 1 99%;
  }
 
 .card {  
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     flex: 0 1 99%;
     background: white;
     border-radius: 25px;
@@ -342,19 +342,21 @@ input {
 
 .card > a {
     width: 100%;
-    /*display: flex;
-    flex-wrap: nowrap;*/
 }
 
 .card-content {
 	padding-left: 1.4em;
     margin-top: 1em; 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .card-content h3 {
     margin-right: 0.5em;
 	margin-bottom: 0.5em;
 	font-weight: bold;
+    justify-content: start;
 }
 
 .card-content p {
@@ -362,7 +364,7 @@ input {
 }
 
 .rating {
-    padding-left: 0.3em;
+     padding-left: 0.3em;
     padding-top: 0.5em;
     font-size: 1.5em;
     margin-bottom: 0.2em;
@@ -381,7 +383,7 @@ input {
 }
 
 .plus {
-    flex-basis: 100%;
+    width: 100%;
     font-size: 1em;
     font-weight: bold;
     padding-bottom: 15px;
@@ -412,7 +414,6 @@ input {
 }
 
 #hebergement p + .rating {
-    margin-top: 0.5em;
     padding-top: 1em;
 }
 
@@ -450,13 +451,24 @@ input {
 
 .title {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .popular_title a {
     text-align: center;
     margin-left: auto;
     margin-right: 1.5em;
+    font-size: 1.2em;
+}
+
+#popular .cards {
+    
+    max-height: 35em;
+}
+
+#popular .card {
+    
+    height: 10em;
 }
 
 #popular .card > a {
@@ -464,9 +476,8 @@ input {
     flex-wrap: nowrap;
 }
 
-#popular p + .rating {
-    margin-top: 2.5em;
-    padding-top: 1em;
+#popular p +.rating {
+    padding-top: 2em;
 }
 
 #popular .card + .card {
@@ -474,17 +485,21 @@ input {
 }
 
 #popular picture {
-    max-width: 100%;
+    max-width: 50%;
 }
 
 #popular picture img {
 	display: block;
     width: 33.3vw;
-    height: 20vh;
+    height: calc(100% - 0.5em);
     object-fit: cover;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     margin: 0.3em;
+}
+
+#popular .card-content {
+    padding-bottom: 0.5em;
 }
 
 /*******ACTIVITIES*******/
@@ -588,13 +603,13 @@ footer a + a {
    }
 
     #popular picture img {
-            width: 0vw;
-            height: 35vh;
+        width: 36vw;
+        height: 22vh;
     }
 
     #hebergement picture img {
         width: 96vw;
-        height: 40vh;
+        height: 35vh;
     }
 
     #activites picture img {
@@ -643,21 +658,34 @@ footer a + a {
         text-align: center; 
     }
     
+
+    #popular {
+        padding-bottom: 0;
+    }
+
     #popular .cards {
         width: 100%;;
     }
-    
-   #popular .card {
-     width: calc(50% - 1em);
-   }
 
-   #popular .card + .card {
+    #popular .card:nth-child(1) {
+        margin-top: 1em;
+    }
+    
+    #popular .card {
+     width: calc(50% - 1em);
+    }
+
+    #popular .card + .card {
        margin: 0.5em  0 0 0;
-   }
+    }
+
+    #popular picture {
+       max-height: 24vh;
+    }
 
     #popular picture img {
-            width: 40vw;
-            height: 15vh;
+        width: 40vw;
+        height: calc(100% - 0.5em);
     }
 
     #popular .card-content {
@@ -665,8 +693,8 @@ footer a + a {
     }
 
     #hebergement {
-        justify-content: space-between;
         flex-wrap: nowrap;
+        padding-bottom: 0;
     }
 
     #hebergement .card {
@@ -675,7 +703,7 @@ footer a + a {
 
     #hebergement picture img {
         width: 96vw;
-        height: 15vh;
+        height: 25vh;
     }
 
     #activites {
@@ -697,7 +725,7 @@ footer a + a {
 
     #activites picture img {
         width: 96vw;
-        height: 15vh;
+        height: 20vh;
     }	
 
     footer {
@@ -713,7 +741,6 @@ footer a + a {
 	 #container {
         display: flex;
         flex-direction: row-reverse;
-        align-items: stretch;
         flex-wrap: nowrap;
 	}
 
@@ -752,11 +779,16 @@ footer a + a {
         width: 66%;
     }
 
-    .cards {
+    /*.cards {
         width: unset;
-    }
+    }*/
+
     .card {
         display: unset;
+    }
+
+    .plus {
+        align-self: flex-end;
     }
 
     #hebergement .card {
@@ -773,6 +805,7 @@ footer a + a {
 
     #popular .card {
         width: calc(33% - 1em);
+        height: 25vh;
     }
 
     #popular .card + .card {
@@ -781,147 +814,185 @@ footer a + a {
 
     #popular picture {
         max-width: 50%;
+        max-height: 23vh;
     }
 
     #popular picture img {
         width: 15vw;
-        height: 10vh;
+        height: 100%;
         padding-right: 0.2em;
     }
-/*
+
+    #popular .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 25vh;
+    }
+  
     #activites {
+        max-width: 97%;
+    }
+
+    #activites .cards {
         display: flex;
-        flex-direction: column;
+        flex-direction: column ;
         flex-wrap: wrap;
-    }
-
-    #activites .cards {
-        
-        justify-content: space-between ;
+        max-height: 70vh;
+        justify-content: unset;
+        padding: 0;
     }
 
     #activites .card {
-        flex: 0 1 calc(25% - 1em);   
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        flex-wrap: wrap;     
-    }
-    
-    #activites picture img {
-        width: 15vw;
-        height: 20vh;
+        flex: 0 1 calc(20% - 1em);
+        margin: 1.5em; 
+        max-height: 68vh;
     }
 
-    #activites .cards > .card {
-		flex: 2.5 0 calc(25% - 1em);
-        height: 50%;
-	}
+    #activites .card > a {
+        height: 100%;
+    }
 
-    #activites .cards > .card:nth-child(1) { order: 1; height: 100%;}
-	#activites .cards > .card:nth-child(2) { order: 2; height: 25%;}
-	#activites .cards > .card:nth-child(3) { order: 3; height: 25%;}
-    #activites .cards > .card:nth-child(4) { order: 4; height: 100%;}
-	#activites .cards > .card:nth-child(5) { order: 5; height: 25%}
-	#activites .cards > .card:nth-child(6) { order: 6; height: 25%;;}
+    #activites .cards .z1 {
+        margin-left: 0px;
+    }
+
+    #activites .cards > .card:nth-child(1) {  
+        width: calc(20% - 1em);;
+        max-height: 68vh;
+        height: 65vh;
+    }
+
+	#activites .cards > .card:nth-child(2) { 
+        width: calc(25% - 1em);
+        max-height: 30vh;
+    }
+
+	#activites .cards > .card:nth-child(3) { 
+        width: calc(25% - 1em);;
+        max-height: 30vh;
+        margin-top: 1.25em;
+        padding-top: 0;
+    }
+
+    #activites .cards > .card:nth-child(4) {  
+        width: calc(25% - 1em);;
+        max-height: 68vh;
+        height: 65vh;
+    }
+
+	#activites .cards > .card:nth-child(5) { 
+        width: calc(25% - 1em);;
+        max-height: 30vh;
+    }
+
+	#activites .cards > .card:nth-child(6) { 
+        width: calc(25% - 1em);;
+        max-height: 30vh;
+        margin-top: 1.25em;
+        padding-top: 0;
+    }
    
+    #activites .z1 picture img,
+    #activites .z4 picture img {
+        width: 100%;
+        height: 55vh;
+    }
+
+    #activites .z2 picture img, #activites .z3 picture img,
+    #activites .z5 picture img,  #activites .z6 picture img {
+        width: 100%;
+        height: 21vh; 
+    }
+
+    #activites .card-content {
+        max-height : 20vh;
+        padding-top: 1em;
+        text-align: center;
+        margin-top: 0.5em;
+    }
+}
+
+/*******Large screens**************/
+@media all and (min-width: 1280px) {
+    #popular p +.rating {
+        padding-top: 4.5em;
+    }
     
-    #activites .cards > .card:nth-child(3n+1) { order: 1; }
-	#activites .cards > .card:nth-child(3n+2) { order: 2; }
-	#activites .cards > .card:nth-child(3n)   { order: 3; }
     #activites .cards {
-       max-width: 100%;
-       width: 100vw;
+        max-height:  75vh;
     }
-    #activites .card {
-        flex: 0 1 calc(25% - 1em);
+
+    #activites .cards > .card:nth-child(3) { 
+        margin-top: 2.5em;
+        /*padding-top: 1em;*/
+    }	
+
+    #activites .cards > .card:nth-child(5) { 
+        margin-top: 2.5em;
+        /*padding-top: 1em;*/
+    }	
+
+    /*
+
+	#activites .cards > .card:nth-child(2) { 
+        width: 25vw;
+        max-height: 25vh;
     }
+
+	#activites .cards > .card:nth-child(3) { 
+        width: 25vw;
+        max-height: 25vh;
+        margin-top: 2.3em;
+        padding-top: 0;
+    }
+  #activites .cards > .card:nth-child(4) {  
+        width: 25vw;
+        max-height: 60vh;
+        height: 50vh;
+    }
+    #activites .cards > .card:nth-child(5) { 
+        width: 25vw;
+        max-height: 25vh;
+    }
+
+	#activites .cards > .card:nth-child(6) { 
+        width: 25vw;
+        max-height: 25vh;
+        margin-top: 2.3em;
+        padding-top: 0;
+    }
+
+    #activites .z1 picture img,
+    #activites .z4 picture img {
+        width: 100%;
+        height: 49vh;
+    }
+
+    #activites .z2 picture img, #activites .z3 picture img,
+    #activites .z5 picture img,  #activites .z6 picture img {
+        width: 100%;
+        height: 20vh; 
+    }
+
+    #activites .card-content {
+        max-height : 5vh;
+        padding-top: 1em;
+        text-align: center;
+        height: 4em;
+        margin-top: 0.5em;
+    }*/
+}
+
+@media all and (min-width: 1600px) {	
     
-    .activity_container_item {
-  flex: 20%;
-  margin: 1.5vw 1.5vw 1.5vw 1.5vw;
 }
 
-.activity_card {
-  box-shadow: 2px 2px 2px var(--shadow-color);
-  border-radius: 20px 20px;
-}
-div .activity-single-2-3,
-div .activity-single-5-6 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 490px;
-  padding: 0px;
-}
-.activity_card img {
-  object-fit: cover;
-  height: 120px;
-  width: 100%;
-  border-top-left-radius: 20px 20px;
-  border-top-right-radius: 20px 20px;
-}
-.activity-single-1 {
-  margin-left: 0px;
-}
-.activity-single-1,
-.activity-single-4 {
-  height: 445px;
-}
-.activity-single-2 {
-  max-height: 255px;
-  margin-top: 0px;
-}
-.activity-single-3 {
-  max-height: 165px;
-}
 
-.activity-single-5 {
-  max-height: 203px;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-.activity-single-6 {
-  max-height: 215px;
-}
+ 
 
-.activity_card .caption {
-  height: 60px;
-}
-.activity-single-1 img,
-.activity-single-4 img {
-  height: 390px;
-}
-.activity-single-2 img {
-  height: 200px;
-}
-.activity-single-3 img {
-  height: 110px;
-}
-
-.activity-single-5 img {
-  height: 145px;
-}
-.activity-single-6 img {
-  height: 160px;
-}
-.activity-single-2-3,
-.activity-single-5-6 {
-  display: flex;
-  flex-flow: column wrap;
-  max-height: 445px;
-}
-.activity-single-5-6 {
-  margin-right: 0px;
-}
-
-/* 11/ figures and images for the activity-singletures of activity MOBILE version*/
-@media (min-width: 768px) and (max-width: 1023px) {
-    .activity {
-      margin: 0px;
-    }
-    */
-
+/* Version grid pour la partie desktop activites*/
+/*
     #activites .cards {
         display: grid;
         max-height: 40vh;
@@ -973,19 +1044,8 @@ div .activity-single-5-6 {
         width: 100%;
         height: 13vh;
     }
-
-}
-
-/*******Large screens**************/
-@media all and (min-width: 1280px) {	
-    #activites .cards {
-        max-height: 60vh;
-    }
-}
-
-@media all and (min-width: 1600px) {	
-    
-}
+*/
+/*fin version grid*/
 
 
 	
