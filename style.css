@@ -1,6 +1,7 @@
  @font-face {
     font-family: 'Raleway';
     src:url('./fonts/Raleway-VariableFont_wght.ttf') format("truetype");
+    font-display: swap;
 }
 
 html, body, div, h1, h2, h3, h4, h5, h6, p, blockquote, a, img, small, strong, sub, sup, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title {
