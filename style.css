@@ -95,25 +95,25 @@ header {
 .logo img {
     position: absolute;
     left: 2em;
-    top: 0.5em;
+    top: 1.5em;
 }
 
 #signin {
     position: absolute;
     right: 0.5em;
-    top: 1.5em;
+    top: 2.5em;
 }
 
 #signin a {
     margin-right: 1.2em;
     color: #0065FC;
-    font-weight: bold;
-    font-size: 1em;
+    font-weight: bolder;
+    font-size: 1.2em;
 }
 
 nav {
-    margin: 0 0.7em;
-    padding-top: 3em;
+    margin: 0.7em 0.7em;
+    padding-top: 2.5em;
     width: 100%
 }
 
@@ -128,15 +128,16 @@ nav ul {
 
 nav li {
     width: 100%;
-    border-bottom: 2px solid #f2f2f2;
+    border-bottom: 0.1em solid #f2f2f2;
 }
 
 nav ul li:first-child {
-    border-bottom: 0.5em solid #0065fc;
+    border-bottom: 0.2em solid #0065fc;
 }
 
 nav a {
     text-align: center;
+    font-weight: bold;
 }
 
 nav a :hover {
@@ -146,7 +147,7 @@ nav a :hover {
 
 nav a:active {
     color: #0065fc;
-    border-bottom: 2px solid #0065fc;
+    border-bottom: 0.2em solid #0065fc;
 }
 
 nav ul li:first-child a {
@@ -155,7 +156,7 @@ nav ul li:first-child a {
 
 /*******Slogan******/
 .slogan {
-    padding: 1em 1em;
+    padding: 0.5em 1em;
     text-align: left;
 }
 
@@ -222,6 +223,9 @@ input {
     min-height: 20px;
     flex-wrap:wrap;
     align-content: space-around;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0.5em;
 }
 
 .filters > h2 {
@@ -280,7 +284,7 @@ input {
 /********Info******/
 #info {
     margin-left: 0.5em;
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-right: 0.5em;
     max-width: 600px;
     height: 2.5em;
@@ -318,7 +322,6 @@ input {
 }
 
 #container {
-	/*width: 100%;*/
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -363,14 +366,12 @@ input {
 }
 
 .rating {
-     padding-left: 0.3em;
+    padding-left: 0;
     padding-top: 0.5em;
-    font-size: 1.5em;
-    margin-bottom: 0.2em;
-}
-
-.rating span {
-    margin-top: 0.5em;
+    font-size: 1.4-+em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 .greystars {
@@ -412,7 +413,7 @@ input {
     margin: 1em 0;
 }
 
-#hebergement p + .rating {
+#hebergement .card-title + .rating {
     padding-top: 1em;
 }
 
@@ -460,23 +461,17 @@ input {
     font-size: 1.2em;
 }
 
-#popular .cards {
-    
+#popular .cards {   
     max-height: 35em;
 }
 
-#popular .card {
-    
+#popular .card {   
     height: 10em;
 }
 
 #popular .card > a {
     display: flex;
     flex-wrap: nowrap;
-}
-
-#popular p +.rating {
-    padding-top: 2em;
 }
 
 #popular .card + .card {
@@ -544,7 +539,6 @@ input {
 #activites .card-content h3 {
     font-size: 0.9em;
     height: 3em;
-    /*line-height: 2.5em;*/
 }
 
 /* Fin de la section principale*/
@@ -603,17 +597,17 @@ footer a + a {
 
     #popular picture img {
         width: 36vw;
-        height: 22vh;
+        height: calc(100% - 0.5em);
     }
 
     #hebergement picture img {
         width: 96vw;
-        height: 35vh;
+        height: 20vh;
     }
 
     #activites picture img {
         width: 96vw;
-        height: 40vh;
+        height: 25vh;
     }
     
 }
@@ -657,17 +651,17 @@ footer a + a {
         text-align: center; 
     }
     
-
     #popular {
         padding-bottom: 0;
     }
 
     #popular .cards {
-        width: 100%;;
+        width: 100%;
+        max-height: unset;
     }
 
     #popular .card:nth-child(1) {
-        margin-top: 1em;
+        margin: 1em 0;
     }
     
     #popular .card {
@@ -678,17 +672,9 @@ footer a + a {
        margin: 0.5em  0 0 0;
     }
 
-    #popular picture {
-       max-height: 24vh;
-    }
-
     #popular picture img {
         width: 40vw;
         height: calc(100% - 0.5em);
-    }
-
-    #popular .card-content {
-        padding-left: 0.5em;
     }
 
     #hebergement {
@@ -698,11 +684,6 @@ footer a + a {
 
     #hebergement .card {
         flex: 0 1 calc(50% - 1em);
-    }
-
-    #hebergement picture img {
-        width: 96vw;
-        height: 25vh;
     }
 
     #activites {
@@ -722,11 +703,6 @@ footer a + a {
         display: unset;
     }
 
-    #activites picture img {
-        width: 96vw;
-        height: 20vh;
-    }	
-
     footer {
         display: flex;
         flex-direction: row;
@@ -738,7 +714,6 @@ footer a + a {
 /*******Desktop**************/
 @media all and (min-width: 1024px){		
 	 #container {
-        display: flex;
         flex-direction: row-reverse;
         flex-wrap: nowrap;
 	}
@@ -746,7 +721,7 @@ footer a + a {
     nav {
         width : 30%;
         position: absolute;
-        top: -2.5em;
+        top: -1.5em;
         right: 7em;
     }
 
@@ -755,7 +730,7 @@ footer a + a {
     }
 
     nav ul li:first-child {
-        border-top: 0.5em solid #0065fc;
+        border-top: 0.2em solid #0065fc;
         border-bottom: none; 
     }  
     
@@ -765,6 +740,12 @@ footer a + a {
 
     .slogan {
         margin-top: 3em;
+    }
+
+    .filters > h2 {
+        width: unset;
+        align-self: center;
+        padding-right: 1em;
     }
 
     aside {
@@ -778,10 +759,6 @@ footer a + a {
         width: 66%;
     }
 
-    /*.cards {
-        width: unset;
-    }*/
-
     .card {
         display: unset;
     }
@@ -792,6 +769,17 @@ footer a + a {
 
     #hebergement .card {
         flex: 0 1 calc(32% - 1em);
+    }
+
+     
+    #hebergement .card-content  {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: 12vh;
+    }
+   
+    #hebergement .card-title + .rating {
+        padding-top: 0;
     }
 
     #popular {
@@ -805,10 +793,12 @@ footer a + a {
     #popular .card {
         width: calc(33% - 1em);
         height: 25vh;
+        flex-grow: 0;
+        flex-shrink: 0;
     }
 
     #popular .card + .card {
-        margin: 2em 0;
+        margin: 0 0 1em 0;
     }
 
     #popular picture {
@@ -821,14 +811,17 @@ footer a + a {
         height: 100%;
         padding-right: 0.2em;
     }
-
-    #popular .card-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        height: 25vh;
+      
+    #popular .card-content  {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height:  22vh;
     }
-  
+
+    #popular .card-title + .rating {
+        padding-top: 0;
+    }
+
     #activites {
         max-width: 97%;
     }
@@ -895,13 +888,13 @@ footer a + a {
     #activites .z1 picture img,
     #activites .z4 picture img {
         width: 100%;
-        height: 55vh;
+        height: 45vh;
     }
 
     #activites .z2 picture img, #activites .z3 picture img,
     #activites .z5 picture img,  #activites .z6 picture img {
         width: 100%;
-        height: 21vh; 
+        height: 16vh; 
     }
 
     #activites .card-content {
@@ -914,23 +907,56 @@ footer a + a {
 
 /*******Large screens**************/
 @media all and (min-width: 1280px) {
-    #popular p +.rating {
-        padding-top: 4.5em;
+    body { 
+        width: 70vw; 
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    header {
+        max-width: 70vw;
+    }
+
+    .logo img {
+        position: inherit;
+        margin-left: 2em;
+    }
+
+    header > #signin {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 20vw
+    }
+
     
+    header > nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 30vw
+    }
+
+    
+    #hebergement {
+        width: 66vw;
+    }
+
+    #popular {
+        width: 33vw;
+    }
     #activites .cards {
         max-height:  75vh;
     }
 
     #activites .cards > .card:nth-child(3) { 
         margin-top: 2.5em;
-        /*padding-top: 1em;*/
     }	
 
     #activites .cards > .card:nth-child(5) { 
         margin-top: 2.5em;
-        /*padding-top: 1em;*/
     }	
+    
 
     /*
 
