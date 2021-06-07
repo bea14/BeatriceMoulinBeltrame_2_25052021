@@ -5,12 +5,12 @@ Code source du Projet 2 de la formation Développeur Web d'OpenClassrooms, intit
 
 ## Le projet
 
-En􀀃n, vous avez trouvé votre premier stage en tant que développeur web chez Reservia, une petite
-entreprise proposant un outil de plani􀀃cation de vacances. Leur site permet aux usagers de trouver des
+Enfn, vous avez trouvé votre premier stage en tant que développeur web chez Reservia, une petite
+entreprise proposant un outil de planifcation de vacances. Leur site permet aux usagers de trouver des
 hébergements et des activités dans la ville de leur choix. Les hébergements peuvent également être
-􀀃ltrés par thématique, par exemple leur budget ou leur ambiance.
+fltrés par thématique, par exemple leur budget ou leur ambiance.
 Un nouveau design basé sur les principes du Material Design vient d’être proposé par Loïc, designer UI.
-Avant de valider dé􀀃nitivement ce design, l’entreprise décide de réaliser un prototype. La première
+Avant de valider défnitivement ce design, l’entreprise décide de réaliser un prototype. La première
 étape consiste à intégrer la maquette responsive en **HTML** et **CSS**.
 
 ## Modalités
