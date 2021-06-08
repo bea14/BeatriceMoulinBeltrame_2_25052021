@@ -37,7 +37,6 @@ body >* {
 }
 
 a, a:visited {
-    color:#000000 ;
     text-decoration: none;
 }
 
@@ -65,7 +64,6 @@ section {
 	width: 100%;
 	padding-bottom: 1.2em;
     padding-top: 1.5em;
-	/*margin: 0.5em 1em;*/
 }
 
 .button {
@@ -89,79 +87,133 @@ section {
 
 header {    
     background-color: #fff;
-    padding: 1em 0; 
+    /*padding: 1em 0; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-flow: column wrap;
 }
 
-.logo img {
-    position: absolute;
-    left: 2em;
-    top: 1.5em;
+@media all and (min-width: 30em)  {
+    header {
+        align-items: unset;
+    }
 }
 
-#signin {
-    position: absolute;
-    right: 0.5em;
-    top: 2.5em;
+.header {
+    display: flex;    
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
 }
 
-#signin a {
-    margin-right: 1.2em;
-    color: #0065FC;
-    font-weight: bolder;
-    font-size: 1.2em;
+.header > .headerSignin {
+    order: 2;
 }
 
-nav {
-    margin: 0.7em 0.7em;
-    padding-top: 2.5em;
-    width: 100%
+.header > .headerNav {
+  order: 3;
 }
 
-nav ul {
-    padding: 1em 0.8em;
-    list-style: none;
+@media all and (min-width: 64em) {
+    .header {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .header > .headerSignin {
+        order: 3;
+    }
+
+    .header > .headerNav {
+      order: 2;
+    }
+}
+
+#logo {
+    margin: 0px 4%;
+    flex-basis: 25%;
+}
+
+.headerNav {
     display: flex;
+    flex-flow: row nowrap;
+    align-items: center; 
     justify-content: space-around;
-    flex-flow: row nowrap;    
-    text-align: center;
-}
-
-nav li {
     width: 100%;
     border-bottom: 0.1em solid #f2f2f2;
 }
 
-nav ul li:first-child {
-    border-bottom: 0.2em solid #0065fc;
-}
-
-nav a {
+.headerNavLink {
+    margin-bottom: 2rem;
+    font-weight: 500;
     text-align: center;
-    font-weight: bold;
+    border-top: 0.2em transparent solid;
+    border-bottom: 0.2em transparent solid;
 }
 
-nav a :hover {
-    color: #0065fc;
-    border-top: 0.125em solid #0065fc;
+.headerNavLink:active {
+    color: #0065FC;
+}
+.headerNavLink:hover {
+    color: #0065FC;
 }
 
-nav a:active {
-    color: #0065fc;
+.headerNav :first-child {
+    color: #0065FC;
     border-bottom: 0.2em solid #0065fc;
 }
 
-nav ul li:first-child a {
+.headerSignin {
+    margin-right: 1.2rem;
     color: #0065FC;
+    font-weight: 700;
+    margin: 0px 4%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 64em){
+    .headerNav{
+        order: 1;
+        width: 80vw;
+        margin: 0px;
+        text-align: center;
+        justify-content: flex-end;
+        border-bottom: none;
+    }
+    
+    .headerNav :first-child {
+        border-top: 0.2em solid #0065fc;
+        border-bottom: none;
+        padding: 0 1em;
+    }
+
+    .headerNav :nth-child(2n+2) {
+        border-top: 0.2em solid transparent;
+        padding: 0.2em 1em 0 1em;
+    }
+
+    .headerNavLink {
+        margin-bottom: 0;
+    }
+
+    .headerSignin {
+        padding:0;
+    }
 }
 
 /*******Slogan******/
 .slogan {
     padding: 0.5em 1em;
     text-align: left;
+    max-width: 100%;
+    width: 98%;
 }
 
 h1 + h2 {
@@ -172,8 +224,22 @@ h1 + h2 {
     font-weight: normal;
 }
 
+
+@media all and (min-width: 48em)  {
+    .slogan {
+       margin: 1em 1em;
+       width: 100%;
+   }
+}
+
+@media all and (min-width: 64em){		
+    .slogan {
+        margin-top: 3em;
+    }
+}
+
 /*******barre de recherche******/
-.searchbar{
+.searchbar {
     text-align: center;
     margin: 0 1em 1em 1em;
     width: 100%;
@@ -184,10 +250,10 @@ h1 + h2 {
     background-color: #F2F2F2;
     border-top-left-radius: 0.75em;
     border-bottom-left-radius: 0.75em;
-    width: 3.125em;
-    height: 3.125em;
-    font-size: 1.5em;
-    line-height: 3.125em;     
+    width: 2em;
+    height: 2em;
+    font-size: 0.8em;
+    line-height: 2em;     
     text-align: center;
     vertical-align: bottom;
 }
@@ -196,24 +262,24 @@ input {
     border: 0.125em solid #F2F2F2;
     color: #000;
     font-weight: bold;
-    height: 3.125em;
+    height: 2em;
 }
 
 #loupe > i {
     background-color: #0065FC;
     color: #ffffff;
     border-radius: 0.75em;
-    width: 3.125em;
-    height: 3.125em;
-    font-size: 1.5em;
-    line-height: 3.125em;
+    width: 2em;
+    height: 2em;
+    font-size: 1em;
+    line-height: 2em;
     text-align: center;
     vertical-align: bottom;
-    transform: translateY(35%);
-    -webkit-transform: translateY(35%);
-    -moz-transform: translateY(35%);
-    -ms-transform: translateY(35%);
-    -o-transform: translateY(35%);
+    transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
     -webkit-border-radius: 0.75em;
     -moz-border-radius: 0.75em;
     -ms-border-radius: 0.75em;
@@ -224,15 +290,78 @@ input {
     display: none;
 }
 
+@media all and (min-width: 30em) {	
+    #searchbar {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .searchbar > i {
+        width: 3.125em;
+        height: 3.125em;
+        font-size: 0.8em;
+        line-height: 3.125em;
+        vertical-align: bottom;
+}
+
+    input {
+        height: 3.125em;
+    }
+    #loupe > i {
+        width: 3.125em;
+        height: 3.125em;
+        font-size: 1em;
+        line-height: 3.125em;
+        transform: translateY(35%);
+        -webkit-transform: translateY(35%);
+        -moz-transform: translateY(35%);
+        -ms-transform: translateY(35%);
+        -o-transform: translateY(35%);
+    }
+}
+
+@media all and (min-width: 48em)  {
+    .searchbar {
+        margin-left: 1em;
+        margin-right: 1em;
+        text-align: left;
+        display: flex;        
+    }
+
+    .searchbar > i {        
+        width: 3.125em;
+        height: 3.125em;
+        font-size: 0.8em;
+        line-height: 3.125em;     
+    }
+
+    #loupe {
+        display: none;
+    }
+    
+    .rechercher {
+        display: block;
+        background-color: #0065FC;
+        color: #ffffff;
+        border-top-right-radius: 0.75em;
+        border-bottom-right-radius: 0.75em;
+        width: 9.375em;
+        height: 3.125em;
+        font-size: 0.8em;
+        line-height: 3.125em;
+        text-align: center; 
+    }
+}
 /********filters******/
 .filters {
     display: flex;
     flex-direction: row;
     min-height: 1.25em;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-content: space-around;
     max-width: 100%;
-    width: 100%;
+    width: 98%;
     margin-top: 0.5em;
 }
 
@@ -251,7 +380,7 @@ input {
     background-color: #ffffff;
     font-size: 1em;
     font-weight: bold;
-    height: 3.125em;
+    height: 2em;
     border-radius: 1.56em 1.56em;
     border: 0.125em solid #f2f2f2;
     align-items: center;
@@ -266,18 +395,18 @@ input {
 
 .filterbutton i {
     background-color: #deebff;
-    width: 3.125em;
-    height: 3.125em;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    line-height: 3.125em;
+    line-height: 2em;
     text-align: center;
     margin-right: 1em;
     color: #0065FC;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .filterbutton:hover {
@@ -289,11 +418,34 @@ input {
     -o-transform: scale(1.2);
 }
 
+@media all and (min-width: 30em)  {
+    .filterbutton {
+        height: 3.125em;
+    }
+
+    .filterbutton i {
+        width: 3.125em;
+        height: 3.125em;
+        line-height: 3.125em;
+    }
+}
+
+@media all and (min-width: 48em)  {
+    .filters > h2 {
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 64em){		
+    .filters > h2 {
+        width: unset;
+        align-self: center;
+        padding-right: 1em;
+    }
+}
 /********Info******/
 #info {
-    margin-left: 0.5em;
-    margin-top: 1.5em;
-    margin-right: 0.5em;
+    margin: 1.5em 0.5em 0.5em 1em;
     max-width: 37.5em;
     height: 2.5em;
     display: flex;
@@ -309,14 +461,13 @@ input {
     color: #0065FC;
     border: 0.125em solid #DEEBFF;
     width: 1.875em;
-    height: 1.875em;
+   /* height: 1.875em;*/
     border-radius: 50%;
     text-align: center;
     line-height: 1.875em;
 }
 
 /* Fin du header*/
-
 
 /*********************************/
 /******Partie principale**********/
@@ -333,6 +484,42 @@ input {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    background-color: transparent;
+}
+
+@media all and (min-width: 48em)  {
+    #popular {
+        padding-bottom: 0;
+        border-left: 1em solid #FFFFFF;
+    }
+    
+    #hebergement {
+        flex-wrap: nowrap;
+        padding-bottom: 0;
+    }
+
+    #activites {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+}
+
+@media all and (min-width: 64em){		
+    #container {
+       flex-direction: row-reverse;
+       flex-wrap: nowrap;
+    }
+
+   aside {
+        background-color: #F2F2F2;
+        color: rgb(66, 66, 66);
+        width: 33%;
+    }
+  
+    #hebergement {
+        background-color: #F2F2F2;
+        width: 66%;
+    }
 }
 
 .cards {
@@ -405,7 +592,22 @@ input {
    font-weight: bold;
 }
 
+@media all and (min-width: 30em) {	
+    .card {
+       justify-content: unset;
+       flex: 1 1 calc(96% - 1em);
+    }
+}
 
+@media all and (min-width: 64em){	
+    .card {
+        display: unset;
+    }
+
+    .plus {
+        align-self: flex-end;
+    }
+}
 /*******HEBERGEMENT*******/
 #hebergement {
     max-width: 100%;
@@ -444,6 +646,39 @@ input {
     border-top-right-radius: 1.56em;
 }
 
+@media all and (min-width: 30em) {	
+    #hebergement picture img {
+         width: 96vw;
+         height: 20vh;
+     }
+}
+
+@media all and (min-width: 48em)  {
+    #hebergement {
+        background-color: #F2F2F2;
+        border-right: 1em solid #FFFFFF;
+    }
+
+    #hebergement .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+@media all and (min-width: 64em){	
+    #hebergement .card {
+        flex: 0 1 calc(32% - 1em);
+    }
+     
+    #hebergement .card-content  {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: 12vh;
+    }
+   
+    #hebergement .card-title + .rating {
+        padding-top: 0;
+    }
+}
 /*******POPULAR*******/
 #popular {
     max-width: 100%;
@@ -508,6 +743,71 @@ input {
     padding-bottom: 0.5em;
 }
 
+@media all and (min-width: 48em)  {
+    #popular .cards {
+        width: 100%;
+        max-height: unset;
+    }
+
+    #popular .card:nth-child(1) {
+        margin: 1em 0;
+    }
+    
+    #popular .card {
+     width: calc(50% - 1em);
+    }
+
+    #popular .card + .card {
+       margin: 0.5em  0 0 0;
+    }
+
+    #popular picture img {
+        width: 40vw;
+        height: calc(100% - 0.5em);
+    }
+}
+
+@media all and (min-width: 64em){
+    #popular {
+        width: 33%;
+    }
+
+    .popular_title {
+        width: unset;
+    }
+
+    #popular .card {
+        width: calc(33% - 1em);
+        height: 25vh;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    #popular .card + .card {
+        margin: 0 0 1em 0;
+    }
+
+    #popular picture {
+        max-width: 50%;
+       max-height: 25vh;
+    }
+
+    #popular picture img {
+        width: 10vw;
+        height: calc(100% - 0.5em);
+        padding-right: 0.2em;
+    }
+      
+    #popular .card-content  {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height:  22vh;
+    }
+
+    #popular .card-title + .rating {
+        padding-top: 0;
+    }
+}
 /*******ACTIVITIES*******/
 #activites {
     max-width: 100%;
@@ -553,70 +853,7 @@ input {
     height: 3em;
 }
 
-/* Fin de la section principale*/
-
-/************************/
-/*** Début du footer*****/
-/************************/
-footer  {
-	width: 100%;
-	padding: 1.25em 0;
-    background-color: #F2F2F2;
-    min-height: 6.25em;
-}
-
-footer a{
-    font-size: 0.9em;
-    padding-top: 1em;
-}
-
-footer div {
-    margin: 1em;
-}
-
-.about, .accomodations, .help {
-    padding: 1em;
-    line-height: 1em;
-}
-
-footer h2 {
-    margin-bottom: 1em;
-    font-weight: bold;
-    font-size: large;
-}
-
-footer a + a {
-    margin: 1em;
-}
-
-/*********************************************/
-/*********************RESPONSIVE**************/
-/*********************************************/
-
-/*******Smartphones paysage et tablettes portrait**************/
-
-@media all and (min-width: 30em) {	
-    #searchbar {
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: center;
-    }
-
-   .card {
-      justify-content: unset;
-      flex: 1 1 calc(96% - 1em);
-   }
-
-    #popular picture img {
-        width: 36vw;
-        height: calc(100% - 0.5em);
-    }
-
-    #hebergement picture img {
-        width: 96vw;
-        height: 20vh;
-    }
-
+@media all and (min-width: 30em) {
     #activites picture img {
         width: 96vw;
         height: 25vh;
@@ -624,85 +861,7 @@ footer a + a {
     
 }
 
-/*******Tablettes et iPad**************/
 @media all and (min-width: 48em)  {
-    header{
-        align-items: unset;
-    }
-
-     .slogan {
-        margin: 1em 1em;
-        width: 100%;
-    }
-
-    .searchbar {
-        margin-left: 1em;
-        margin-right: 1em;
-        text-align: left;
-        display: flex;        
-    }
-
-    #loupe {
-        display: none;
-    }
-
-    .filters > h2 {
-        width: 100%;;
-    }
-
-    .rechercher {
-        display: block;
-        background-color: #0065FC;
-        color: #ffffff;
-        border-top-right-radius: 0.75em;
-        border-bottom-right-radius: 0.75em;
-        width: 9.375em;
-        height: 3.125em;
-        font-size: 1.2em;
-        line-height: 3.125em;
-        text-align: center; 
-    }
-    
-    #popular {
-        padding-bottom: 0;
-    }
-
-    #popular .cards {
-        width: 100%;
-        max-height: unset;
-    }
-
-    #popular .card:nth-child(1) {
-        margin: 1em 0;
-    }
-    
-    #popular .card {
-     width: calc(50% - 1em);
-    }
-
-    #popular .card + .card {
-       margin: 0.5em  0 0 0;
-    }
-
-    #popular picture img {
-        width: 40vw;
-        height: calc(100% - 0.5em);
-    }
-
-    #hebergement {
-        flex-wrap: nowrap;
-        padding-bottom: 0;
-    }
-
-    #hebergement .card {
-        flex: 0 1 calc(50% - 1em);
-    }
-
-    #activites {
-        justify-content: space-between;
-        flex-wrap: nowrap;
-    }
-
     #activites .cards {
         display: flex;
     }
@@ -713,128 +872,10 @@ footer a + a {
     }
     #activites .card > a {
         display: unset;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-    }
+    }    
 }
 
-/*******Desktop**************/
-@media all and (min-width: 64em){		
-	 #container {
-        flex-direction: row-reverse;
-        flex-wrap: nowrap;
-	}
-
-    nav {
-        width : 30%;
-        position: absolute;
-        top: -1.5em;
-        right: 7em;
-    }
-
-    nav li {
-        border: none;
-        padding-left: 1em;
-    }
-
-    nav ul li:first-child {
-        border-top: 0.2em solid #0065fc;
-        border-bottom: none; 
-    }  
-    
-    nav ul li:first-child a {
-        color: #0065fc;
-    } 
-
-    .slogan {
-        margin-top: 3em;
-    }
-
-    .filters > h2 {
-        width: unset;
-        align-self: center;
-        padding-right: 1em;
-    }
-
-    aside {
-		background-color: #c8e6c9;
-		color: rgb(66, 66, 66);
-        width: 33%;
-	}
-      
-    #hebergement {
-        background-color: #F2F2F2;
-        width: 66%;
-    }
-
-    .card {
-        display: unset;
-    }
-
-    .plus {
-        align-self: flex-end;
-    }
-
-    #hebergement .card {
-        flex: 0 1 calc(32% - 1em);
-    }
-
-     
-    #hebergement .card-content  {
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        height: 12vh;
-    }
-   
-    #hebergement .card-title + .rating {
-        padding-top: 0;
-    }
-
-    #popular {
-        width: 33%;
-    }
-
-    .popular_title {
-        width: unset;
-    }
-
-    #popular .card {
-        width: calc(33% - 1em);
-        height: 25vh;
-        flex-grow: 0;
-        flex-shrink: 0;
-    }
-
-    #popular .card + .card {
-        margin: 0 0 1em 0;
-    }
-
-    #popular picture {
-        max-width: 50%;
-       max-height: 25vh;
-    }
-
-    #popular picture img {
-        width: 10vw;
-        height: calc(100% - 0.5em);
-        padding-right: 0.2em;
-    }
-      
-    #popular .card-content  {
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        height:  22vh;
-    }
-
-    #popular .card-title + .rating {
-        padding-top: 0;
-    }
-
+@media all and (min-width: 64em){
     #activites {
         max-width: 97%;
     }
@@ -919,39 +960,69 @@ footer a + a {
     }
 }
 
+/* Fin de la section principale*/
+
+/************************/
+/*** Début du footer*****/
+/************************/
+footer  {
+	width: 100%;
+	padding: 1.25em 0;
+    background-color: #F2F2F2;
+    min-height: 6.25em;
+}
+
+footer a {
+    font-size: 0.9em;
+    padding-top: 1em;
+}
+
+footer div {
+    margin: 1em;
+}
+
+.about, .accomodations, .help {
+    padding: 1em;
+    line-height: 1em;
+}
+
+footer h2 {
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: large;
+}
+
+footer a + a {
+    margin: 1em;
+}
+
+@media all and (min-width: 48em)  {
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+}
+/*********************************************/
+/*********************RESPONSIVE**************/
+/*********************************************/
 /*******Large screens**************/
 @media all and (min-width: 80em) {
     body { 
-        width: 70vw; 
+        max-width: 90rem; 
         margin-left: auto;
         margin-right: auto;
     }
 
     header {
-        max-width: 70vw;
+        max-width: 90rem;
     }
 
-    .logo img {
-        position: inherit;
-        margin-left: 2em;
+    #container {
+        justify-content: space-around;
     }
 
-    header > #signin {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 20vw
-    }
-
-    
-    header > nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 30vw
-    }
-
-    
     #hebergement {
         width: 66vw;
     }
@@ -959,6 +1030,7 @@ footer a + a {
     #popular {
         width: 33vw;
     }
+
     #activites .cards {
         max-height:  75vh;
     }
@@ -970,65 +1042,7 @@ footer a + a {
     #activites .cards > .card:nth-child(5) { 
         margin-top: 1.5em;
     }	
-    
-
-    /*
-
-	#activites .cards > .card:nth-child(2) { 
-        width: 25vw;
-        max-height: 25vh;
-    }
-
-	#activites .cards > .card:nth-child(3) { 
-        width: 25vw;
-        max-height: 25vh;
-        margin-top: 2.3em;
-        padding-top: 0;
-    }
-  #activites .cards > .card:nth-child(4) {  
-        width: 25vw;
-        max-height: 60vh;
-        height: 50vh;
-    }
-    #activites .cards > .card:nth-child(5) { 
-        width: 25vw;
-        max-height: 25vh;
-    }
-
-	#activites .cards > .card:nth-child(6) { 
-        width: 25vw;
-        max-height: 25vh;
-        margin-top: 2.3em;
-        padding-top: 0;
-    }
-
-    #activites .z1 picture img,
-    #activites .z4 picture img {
-        width: 100%;
-        height: 49vh;
-    }
-
-    #activites .z2 picture img, #activites .z3 picture img,
-    #activites .z5 picture img,  #activites .z6 picture img {
-        width: 100%;
-        height: 20vh; 
-    }
-
-    #activites .card-content {
-        max-height : 5vh;
-        padding-top: 1em;
-        text-align: center;
-        height: 4em;
-        margin-top: 0.5em;
-    }*/
 }
-
-@media all and (min-width: 100em) {	
-    
-}
-
-
- 
 
 /* Version grid pour la partie desktop activites*/
 /*
@@ -1085,8 +1099,3 @@ footer a + a {
     }
 */
 /*fin version grid*/
-
-
-	
-
-    
