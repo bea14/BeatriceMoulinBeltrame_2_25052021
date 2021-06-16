@@ -2,6 +2,7 @@
 Code source du Projet 2 de la formation Développeur Web d'OpenClassrooms, intitulé "Transformez une maquette en site web"
 
 ## Version 1.0.0
+![Screenshot site web](ScreenshotReservia.png)
 
 ## Le projet
 
