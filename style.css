@@ -46,6 +46,11 @@ ul {
     display: inline-flex;
     margin: 0;
 }
+
+.boldtext {
+    font-weight: bold;
+}
+
 /***************************/
 /********** Header *********/
 /**************************/
@@ -606,6 +611,7 @@ button  {
     flex-flow: row nowrap; 
     width: 100vw;
     margin-right: 1em;
+    align-items: baseline;
 }
 
 .title {
