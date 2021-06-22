@@ -146,7 +146,6 @@ header {
     justify-content: center;
     height: 40px;
     margin: 20px 0 30px;
-
 }
 
 .searchbar > i {
@@ -187,6 +186,10 @@ button  {
 }
 
 @media all and (min-width: 48em)  {
+    .searchbar {
+        justify-content: unset;
+    }
+
     #loupe {
         display: none;
     }
@@ -469,13 +472,26 @@ button  {
 @media all and (min-width: 48em)  {
     #hebergement .cards {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
     #hebergement .card {
-        display: flex;
         flex: 0 1 calc(50% - 1em);
+        margin: 0 0.2rem;
+    }
+
+    #hebergement .card + .card {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    #hebergement .card:first-child {
+        margin-bottom: 1em;
+    }
+    
+    #hebergement  .card-content {
+        height: calc(100% - 20vh);
     }
 }
 
@@ -510,7 +526,7 @@ button  {
         padding-top: 0;
     }
     
-    .card-content {
+    #hebergement  .card-content {
         height: calc(100% - 10vh);
     }
 }
@@ -590,52 +606,49 @@ button  {
     }
 }
 /*******ACTIVITIES*******/
-#activites .card {
-    flex-wrap: wrap;
-    margin: 1em 0;
-}
-
-#activites .card > a { 
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-#activites .card-title + .rating {
-    padding-top: 1em;
-}
-
 #activites .card + .card {
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
-#activites picture img {   
-    display: block;
-    max-width: 100%;
+#activites picture img {
+    height: 15vh;
     width: 100%;
-    height: 20vh;
     object-fit: cover;
     border-top-left-radius: 1.56em;
     border-top-right-radius: 1.56em;
 }
 
-@media all and (min-width: 30em) {
+@media all and (min-width: 30em) {	
     #activites picture img {
-        width: 96vw;
-        height: 25vh;
-    } 
+        width: 100%;
+        height: 20vh;
+    }
 }
-
-@media all and (min-width: 48em)  {
-    #activites .card {
+@media all and (min-width: 48em)  {    
+    #activites .cards {
         display: flex;
-        flex: 0 1 calc(50% - 1em);
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    #activites .card > a {
-        flex-wrap: nowrap;
-    }    
+    #activites .card {
+        flex: 0 1 calc(50% - 1em);
+        margin: 0 0.2rem;
+    }
+
+    #activites .card + .card {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    #activites .card:first-child {
+        margin-bottom: 1em;
+    }
+    
+    #activites  .card-content {
+        height: calc(100% - 20vh);
+    }  
 }
 
 @media all and (min-width: 64em){
