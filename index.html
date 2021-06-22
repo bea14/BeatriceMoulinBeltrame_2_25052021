@@ -23,32 +23,37 @@
                 </ul>  
             </nav>
             <!-- Inscription -->
-            <a class="Signin" href="#" data-active="true">S'inscrire</a>
+           <a class="Signin" href="#" data-active="true">S'inscrire</a>
         </div>
-        <!-- Slogan -->
-        <div class="slogan">
-            <h1>Trouvez votre hébergement pour des vaccances de rêve</h1>
-            <h2>En plein centre ville ou en pleine nature</h2>
-        </div>
-        <!--Recherche-->
-        <div class="searchbar">
-            <i class="fas fa-map-marker-alt" aria-hidden="true">&nbsp;</i>
-            <input type="search" id="recherche" name="recherche" placeholder="Marseille, France" aria-label="search">
-            <button id="loupe" type="button" aria-label="Loupe"><i class="fas fa-search" aria-hidden="true">&nbsp;</i></button>
-            <button type="submit" value="Rechercher" class="rechercher">Rechercher</button>
-        </div>
-        <!--Filtres-->
-        <div class="filters">
-            <h2>Filtres</h2>
-            <button class="filterbutton" type="button"><i class="fas fa-money-bill-wave">&nbsp;</i> Economique</button>
-            <button class="filterbutton" type="button"><i class="fas fa-child">&nbsp;</i> Famillial</button>
-            <button class="filterbutton" type="button"><i class="fas fa-heart">&nbsp;</i> Romantique</button>
-            <button class="filterbutton" type="button"><i class="fas fa-dog">&nbsp;</i> Animaux autorisés</button>
-        </div>
-        <!--Informations-->
-        <div id="info">
-            <p><i class="fas fa-info">&nbsp;</i> 
-            Plus de 500 logements sont disponibles dans cette ville</p>
+        <div id="abstract">
+            <!-- Slogan -->
+            <div class="slogan">
+                <h1>Trouvez votre hébergement pour des vaccances de rêve</h1>
+                <h2>En plein centre ville ou en pleine nature</h2>
+            </div>
+            <!--Recherche-->
+            <div class="searchbar">
+                <i class="fas fa-map-marker-alt" aria-hidden="true">&nbsp;</i>
+                <input type="search" id="recherche" name="recherche" placeholder="Marseille, France" aria-label="search">
+                <button id="loupe" type="button" aria-label="Loupe">
+                    <i class="fas fa-search" aria-hidden="true">&nbsp;</i>
+                </button>
+                <button type="submit" value="Rechercher" class="rechercher">Rechercher</button>
+            </div>
+            <!--Filtres-->
+            
+            <div class="filters">
+                <h2>Filtres</h2>
+                <button class="filterbutton" type="button"><i class="fas fa-money-bill-wave">&nbsp;</i> Economique</button>
+                <button class="filterbutton" type="button"><i class="fas fa-child">&nbsp;</i> Famillial</button>
+                <button class="filterbutton" type="button"><i class="fas fa-heart">&nbsp;</i> Romantique</button>
+                <button class="filterbutton" type="button"><i class="fas fa-dog">&nbsp;</i> Animaux autorisés</button>
+            </div>
+            <!--Informations-->
+            <div id="info">
+                <p><i class="fas fa-info">&nbsp;</i> 
+                Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
         </div>
     </header>
 <!--Fin du header-->
@@ -59,252 +64,249 @@ Version desktop : cote à cote hebergements et les populaires puis activites
 -->
     <main>
         <div id="container">
-        <!--Hébergement-->
-        <section id="hebergement">
-            <h2 class="title">Hébergements à Marseille</h2>
-            <section class="cards">
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/hebergement1.jpg" 
-                            srcset="images/hebergements/1_xlarge/hebergement1.jpg 5993w,
-                                    images/hebergements/2_large/hebergement1.jpg 2997w, 
-                                    images/hebergements/3_medium/hebergement1.jpg 1499w, 
-                                    images/hebergements/4_small/hebergement1.jpg 750w" 
-                            sizes="96vw" 
-                            alt="Chambre de l'Auberge de la Cannebière"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Auberge La Cannebière</h3>
-                            <p>Nuit à partir de <span class="boldtext">25€</span></p>  
-                        </div>                      
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
-                            <span class="greystars"> &#9734;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-one -->
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/hebergement2.jpg" 
-                            srcset="images/hebergements/1_xlarge/hebergement2.jpg 5472w,
-                                    images/hebergements/2_large/hebergement2.jpg 2756w, 
-                                    images/hebergements/3_medium/hebergement2.jpg 1368w, 
-                                    images/hebergements/4_small/hebergement2.jpg 684w" 
-                            sizes="96vw" 
-                            alt="Chambre de l'Hôtel du port"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Hôtel du port</h3>
-                            <p>Nuit à partir de 52<span class="boldtext">€</span></p>
+            <!--Hébergement-->
+            <section id="hebergement">
+                <h2 class="title">Hébergements à Marseille</h2>
+                <div class="cards">
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/hebergement1.jpg" 
+                                srcset="images/hebergements/1_xlarge/hebergement1.jpg 5993w,
+                                        images/hebergements/2_large/hebergement1.jpg 2997w, 
+                                        images/hebergements/3_medium/hebergement1.jpg 1499w, 
+                                        images/hebergements/4_small/hebergement1.jpg 750w" 
+                                sizes="96vw" 
+                                alt="Chambre de l'Auberge de la Cannebière"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Auberge La Cannebière</h3>
+                                <p>Nuit à partir de <span class="boldtext">25€</span></p>  
+                            </div>                      
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
+                                <span class="greystars"> &#9734;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-two -->
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/hebergement3.jpg" 
-                            srcset="images/hebergements/1_xlarge/hebergement3.jpg 6000w,
-                                    images/hebergements/2_large/hebergement3.jpg 3000w, 
-                                    images/hebergements/3_medium/hebergement3.jpg 1500w, 
-                                    images/hebergements/4_small/hebergement3.jpg 750w" 
-                            sizes="96vw" 
-                            alt="Chambre de l'Hôtel des mouettes"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Hôtel Les mouettes</h3>
-                            <p>Nuit à partir de 76<span class="boldtext">€</span></p>
+                        </a>
+                    </article><!-- /card-one -->
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/hebergement2.jpg" 
+                                srcset="images/hebergements/1_xlarge/hebergement2.jpg 5472w,
+                                        images/hebergements/2_large/hebergement2.jpg 2756w, 
+                                        images/hebergements/3_medium/hebergement2.jpg 1368w, 
+                                        images/hebergements/4_small/hebergement2.jpg 684w" 
+                                sizes="96vw" 
+                                alt="Chambre de l'Hôtel du port"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Hôtel du port</h3>
+                                <p>Nuit à partir de 52<span class="boldtext">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
-                            <span class="greystars"> &#9734;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-three -->
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/hebergement4.jpg" 
-                            srcset="images/hebergements/1_xlarge/hebergement4.jpg 4000w,
-                                    images/hebergements/2_large/hebergement4.jpg 2000w, 
-                                    images/hebergements/3_medium/hebergement4.jpg 1000w, 
-                                    images/hebergements/4_small/hebergement4.jpg 500w" 
-                            sizes="96vw" 
-                            alt="Chambre de l'Hôtel de la mer"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Hôtel de la mer</h3>
-                            <p>Nuit à partir de 46<span class="boldtext">€</span></p>
+                        </a>
+                    </article><!-- /card-two -->
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/hebergement3.jpg" 
+                                srcset="images/hebergements/1_xlarge/hebergement3.jpg 6000w,
+                                        images/hebergements/2_large/hebergement3.jpg 3000w, 
+                                        images/hebergements/3_medium/hebergement3.jpg 1500w, 
+                                        images/hebergements/4_small/hebergement3.jpg 750w" 
+                                sizes="96vw" 
+                                alt="Chambre de l'Hôtel des mouettes"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Hôtel Les mouettes</h3>
+                                <p>Nuit à partir de 76<span class="boldtext">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
+                                <span class="greystars"> &#9734;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733;</span>
-                            <span class="greystars"> &#9734; &#9734;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-four -->
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/hebergement5.jpg" 
-                            srcset="images/hebergements/1_xlarge/hebergement5.jpg 5212w,
-                                    images/hebergements/2_large/hebergement5.jpg 2606w, 
-                                    images/hebergements/3_medium/hebergement5.jpg 1303w, 
-                                    images/hebergements/4_small/hebergement5.jpg 652w" 
-                            sizes="96vw" 
-                            alt="Chambre de l'Auberge Le Panier"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Auberge Le Panier</h3>
-                            <p>Nuit à partir de <span class="boldtext">23€</span></p>
+                        </a>
+                    </article><!-- /card-three -->
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/hebergement4.jpg" 
+                                srcset="images/hebergements/1_xlarge/hebergement4.jpg 4000w,
+                                        images/hebergements/2_large/hebergement4.jpg 2000w, 
+                                        images/hebergements/3_medium/hebergement4.jpg 1000w, 
+                                        images/hebergements/4_small/hebergement4.jpg 500w" 
+                                sizes="96vw" 
+                                alt="Chambre de l'Hôtel de la mer"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Hôtel de la mer</h3>
+                                <p>Nuit à partir de 46<span class="boldtext">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733;</span>
+                                <span class="greystars"> &#9734; &#9734;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
-                            <span class="greystars"> &#9734;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-five -->
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/hebergement6.jpg" 
-                        srcset="images/hebergements/1_xlarge/hebergement6.jpg 3888w,
-                                images/hebergements/2_large/hebergement6.jpg 1944w, 
-                                images/hebergements/3_medium/hebergement6.jpg 972w, 
-                                images/hebergements/4_small/hebergement6.jpg 486w" 
-                            sizes="96vw" 
-                            alt="Chambre de l'Hôtel chez Amina"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Hôtel chez Amina</h3>
-                            <p>Nuit à partir de 96<span class="boldtext">€</span></p>
+                        </a>
+                    </article><!-- /card-four -->
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/hebergement5.jpg" 
+                                srcset="images/hebergements/1_xlarge/hebergement5.jpg 5212w,
+                                        images/hebergements/2_large/hebergement5.jpg 2606w, 
+                                        images/hebergements/3_medium/hebergement5.jpg 1303w, 
+                                        images/hebergements/4_small/hebergement5.jpg 652w" 
+                                sizes="96vw" 
+                                alt="Chambre de l'Auberge Le Panier"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Auberge Le Panier</h3>
+                                <p>Nuit à partir de <span class="boldtext">23€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
+                                <span class="greystars"> &#9734;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-six -->
+                        </a>
+                    </article><!-- /card-five -->
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/hebergement6.jpg" 
+                            srcset="images/hebergements/1_xlarge/hebergement6.jpg 3888w,
+                                    images/hebergements/2_large/hebergement6.jpg 1944w, 
+                                    images/hebergements/3_medium/hebergement6.jpg 972w, 
+                                    images/hebergements/4_small/hebergement6.jpg 486w" 
+                                sizes="96vw" 
+                                alt="Chambre de l'Hôtel chez Amina"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Hôtel chez Amina</h3>
+                                <p>Nuit à partir de 96<span class="boldtext">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                            </div> 
+                        </div>
+                        </a>
+                    </article><!-- /card-six -->
+                </div>
+                <p class="plus"><a href="#">Afficher plus</a></p>    
             </section>
-            <p class="plus"><a href="#">Afficher plus</a></p>    
-        </section>
-        <!--Fin de la  section hébergement-->
-        <!--Populaires-->
-        <aside id="popular">
-            <div class="popular_title">
-                <h2 class="title">Les plus populaires</h2>
-                <a href="#"><i class="fas fa-chart-line">&nbsp;</i></a>
-            </div>
-            <section class="cards">
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/populaire1.jpg" 
-                            srcset="images/hebergements/1_xlarge/populaire1.jpg 4249w,
-                                    images/hebergements/2_large/populaire1.jpg 2125w, 
-                                    images/hebergements/3_medium/populaire1.jpg 1063w, 
-                                    images/hebergements/4_small/populaire1.jpg 532w" 
-                            sizes="(min-width: 1024px) 15vw, 
-                                    (min-width: 768px) 40vw, 
-                                    33.3vw" 
-                            alt="Chambre de l'Hôtel Le soleil du matin"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Hôtel Le soleil du matin</h3>
-                            <p>Nuit à partir de 128<span class="boldtext">€</span></p>
+            <!--Fin de la  section hébergement-->
+            <!--Populaires-->
+            <aside id="popular">
+                <div class="popular_title">
+                    <h2 class="title">Les plus populaires</h2>
+                    <a href="#"><i class="fas fa-chart-line">&nbsp;</i></a>
+                </div>
+                <div class="cards">
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/populaire1.jpg" 
+                                srcset="images/hebergements/1_xlarge/populaire1.jpg 4249w,
+                                        images/hebergements/2_large/populaire1.jpg 2125w, 
+                                        images/hebergements/3_medium/populaire1.jpg 1063w, 
+                                        images/hebergements/4_small/populaire1.jpg 532w" 
+                                sizes="(min-width: 1024px) 15vw, 
+                                        (min-width: 768px) 40vw, 
+                                        33.3vw" 
+                                alt="Chambre de l'Hôtel Le soleil du matin"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Hôtel Le soleil du matin</h3>
+                                <p>Nuit à partir de 128<span class="boldtext">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-one -->
-                <article class="card">
-                    <a href="#"> 
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/populaire2.jpg" 
-                            srcset="images/hebergements/1_xlarge/populaire2.jpg 4032w,
-                                    images/hebergements/2_large/populaire2.jpg 2016w, 
-                                    images/hebergements/3_medium/populaire2.jpg 1008w, 
-                                    images/hebergements/4_small/populaire2.jpg 504w" 
-                            sizes="(min-width: 1024px) 15vw, 
-                                    (min-width: 768px) 40vw,
-                                    33.3vw" 
-                            alt="Chambre de la maison d'hôtes Au cœur de l'eau"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Au cœur de l'eau Chambres d'hôtes</h3>
-                            <p>Nuit à partir de 71<span class="boldtext">€</span></p>
+                        </a>
+                    </article><!-- /card-one -->
+                    <article class="card">
+                        <a href="#"> 
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/populaire2.jpg" 
+                                srcset="images/hebergements/1_xlarge/populaire2.jpg 4032w,
+                                        images/hebergements/2_large/populaire2.jpg 2016w, 
+                                        images/hebergements/3_medium/populaire2.jpg 1008w, 
+                                        images/hebergements/4_small/populaire2.jpg 504w" 
+                                sizes="(min-width: 1024px) 15vw, 
+                                        (min-width: 768px) 40vw,
+                                        33.3vw" 
+                                alt="Chambre de la maison d'hôtes Au cœur de l'eau"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Au cœur de l'eau Chambres d'hôtes</h3>
+                                <p>Nuit à partir de 71<span class="boldtext">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733; </span>
+                                <span class="greystars">&#9734;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733; </span>
-                            <span class="greystars">&#9734;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-two -->
-                <article class="card">
-                    <a href="#">
-                    <picture class="thumbnail">
-                        <img src="images/hebergements/4_small/populaire3.jpg" 
-                            srcset="images/hebergements/1_xlarge/populaire3.jpg 4000w,
-                                    images/hebergements/2_large/populaire3.jpg 2000w, 
-                                    images/hebergements/3_medium/populaire3.jpg 1000w, 
-                                    images/hebergements/4_small/populaire3.jpg 500w" 
-                            sizes="(min-width: 1024px) 15vw, 
-                                    (min-width: 768px) 40vw, 
-                                    33.3vw" 
-                            alt="Chambre de l'Hôtel Tout bleu et Blanc"
-                        >
-                    </picture>
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h3>Hôtel Tout bleu et Blanc</h3>
-                            <p>Nuit à partir de 68<span class="boldtext">€</span></p>
+                        </a>
+                    </article><!-- /card-two -->
+                    <article class="card">
+                        <a href="#">
+                        <picture class="thumbnail">
+                            <img src="images/hebergements/4_small/populaire3.jpg" 
+                                srcset="images/hebergements/1_xlarge/populaire3.jpg 4000w,
+                                        images/hebergements/2_large/populaire3.jpg 2000w, 
+                                        images/hebergements/3_medium/populaire3.jpg 1000w, 
+                                        images/hebergements/4_small/populaire3.jpg 500w" 
+                                sizes="(min-width: 1024px) 15vw, 
+                                        (min-width: 768px) 40vw, 
+                                        33.3vw" 
+                                alt="Chambre de l'Hôtel Tout bleu et Blanc"
+                            >
+                        </picture>
+                        <div class="card-content">
+                            <div class="card-title">
+                                <h3>Hôtel Tout bleu et Blanc</h3>
+                                <p>Nuit à partir de 68<span class="boldtext">€</span></p>
+                            </div>
+                            <div class="rating">
+                                <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
+                                <span class="greystars"> &#9734;</span>
+                            </div> 
                         </div>
-                        <div class="rating">
-                            <span class="bluestars">&#9733; &#9733; &#9733; &#9733;</span>
-                            <span class="greystars"> &#9734;</span>
-                        </div> 
-                    </div>
-                    </a>
-                </article><!-- /card-three -->
-            </section>
-        </aside>
-        <!--Fin de la section populaires-->
-
-        </div>
-    
+                        </a>
+                    </article><!-- /card-three -->
+                </div>
+            </aside>
+            <!--Fin de la section populaires-->
+        </div>    
 
         <!--Début de la section activités-->
-
         <section id="activites">
             <h2 class="title">Activités à Marseille</h2>
-            <section class="cards grid-container">
+            <div class="cards grid-container">
                 <article class="card z1">
                     <a href="#">
                     <picture class="thumbnail">
@@ -414,33 +416,35 @@ Version desktop : cote à cote hebergements et les populaires puis activites
                     </div>
                     </a>
                 </article><!-- /card-three -->
-            </section>
+            </div>
         </section>
-        <!--Fin de la section activités-->
-        
+        <!--Fin de la section activités-->   
     </main>
 <!--Fin de la page principale-->
+
 <!--Début du footer
 Version mobile : A propos, hebergement, contact se suivent
 Version desktop : les 3 cote à cote -->
     <footer>
-        <div class="about">
-            <h2>À propos</h2>
-            <a href="#"><p>Fonctionnement du site</p></a>
-            <a href="#"><p>Conditions générales de ventes</p></a>
-            <a href="#"><p>Données et confidentilité</p></a>
-        </div>
+        <div id="footer-container">
+            <div class="about">
+                <h2>À propos</h2>
+                <a href="#"><p>Fonctionnement du site</p></a>
+                <a href="#"><p>Conditions générales de ventes</p></a>
+                <a href="#"><p>Données et confidentilité</p></a>
+            </div>
 
-        <div class="accomodations">
-            <h2>Nos hébergements</h2>
-            <a href="#"><p>Charte qualité</p></a>
-            <a href="#"><p>Soumettre votre hôtel</p></a>
-        </div>
+            <div class="accomodations">
+                <h2>Nos hébergements</h2>
+                <a href="#"><p>Charte qualité</p></a>
+                <a href="#"><p>Soumettre votre hôtel</p></a>
+            </div>
 
-        <div class="help">
-            <h2>Assistance</h2>
-            <a href="#"><p>Centre d'aide</p></a>
-            <a href="#"><p>Nous contacter</p></a>
+            <div class="help">
+                <h2>Assistance</h2>
+                <a href="#"><p>Centre d'aide</p></a>
+                <a href="#"><p>Nous contacter</p></a>
+            </div>
         </div>
     </footer>
     <!--Fin du footer -->
